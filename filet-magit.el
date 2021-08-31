@@ -47,6 +47,7 @@
                             (mapcar 'filet--recipe-name filet-recipe-list))))
 
 (defun filet-add-recipe (name ingredients instructions)
+  "Add a recipe to the list."
   (interactive "sName: \nsIngredients: \nsInstructions: ")
   (setq filet-recipe-list (cons
                            (filet-new-recipe name ingredients instructions)
