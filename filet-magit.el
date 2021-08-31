@@ -33,6 +33,11 @@
 (defun filet--recipe-name (recipe)
   (alist-get 'name recipe))
 
+(defun filet-new-recipe (name ingredients instructions)
+  `((name . ,name)
+    (ingredients . ,ingredients)
+    (instructions . ,instructions)))
+
 (defun filet-show-recipe ()
   "Select a recipe to be displayed."
   (interactive)
@@ -43,9 +48,7 @@
 (defun filet-add-recipe (name ingredients instructions)
   (interactive "sName: \nsIngredients: \nsInstructions: ")
   (setq filet-recipe-list (cons
-                           `((name . ,name)
-                             (ingredients . ,ingredients)
-                             (instructions . ,instructions))
+                           (filet-new-recipe name ingredients instructions)
                            filet-recipe-list))
   (message "Added recipe \"%s\"" name))
 
