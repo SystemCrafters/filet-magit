@@ -33,14 +33,19 @@
 (defun filet--recipe-name (recipe)
   (alist-get 'name recipe))
 
-(defun filet-new-recipe (name)
-  (interactive "sName: ")
-  (message "Created recipe \"%s\"" name))
-
 (defun filet-show-recipe ()
   (interactive)
   (message "Recipe: %s"
            (completing-read "Select a recipe:"
                             (mapcar 'filet--recipe-name filet-recipe-list))))
+
+(defun filet-add-recipe (name ingredients instructions)
+  (interactive "sName: \nsIngredients: \nsInstructions: ")
+  (setq filet-recipe-list (cons
+                           `((name . ,name)
+                             (ingredients . ,ingredients)
+                             (instructions . ,instructions))
+                           filet-recipe-list))
+  (message "Added recipe \"%s\"" name))
 
 ;;; filet-magit ends here
