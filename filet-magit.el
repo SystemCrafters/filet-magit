@@ -34,6 +34,7 @@
   (alist-get 'name recipe))
 
 (defun filet-show-recipe ()
+  "Select a recipe to be displayed."
   (interactive)
   (message "Recipe: %s"
            (completing-read "Select a recipe:"
