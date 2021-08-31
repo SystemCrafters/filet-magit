@@ -26,7 +26,7 @@
 ;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 (defvar filet-recipe-list '(((name . "Mashed Taters")
-                             (ingredients . ("2 taters", "Salt", "Black Pepper", "Milk"))
+                             (ingredients . ("2 taters", "Salt", "Green Pepper", "Milk"))
                              (instructions . "Peel, boil, mash; add butter, salt, pepper, and milk")))
   "An alist containing the entire recipe database.")
 
