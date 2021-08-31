@@ -34,6 +34,7 @@
   (alist-get 'name recipe))
 
 (defun filet-new-recipe (name ingredients instructions)
+  (message "DEBUG: Making recipe %s" name)
   `((name . ,name)
     (ingredients . ,ingredients)
     (instructions . ,instructions)))
