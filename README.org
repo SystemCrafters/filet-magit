@@ -1,0 +1,11 @@
+#+title: filet-magit: An example repo!
+
+This is an example repository that is used to demonstrate Magit's interactive rebase functionality in the [[https://youtube.com/SystemCrafters][System Crafters]] video "[[https://systemcrafters.net/mastering-git-with-magit/using-interactive-rebase/][Clean Your Commits Like a Git Rebase Expert with Magit]]" ([[https://youtu.be/zM7K1y4h6UQ][video link]]).
+
+Clone this repository to follow along with the video using this command:
+
+#+begin_src sh
+
+  git clone https://github.com/SystemCrafters/filet-magit -b add-recipes
+
+#+end_src
